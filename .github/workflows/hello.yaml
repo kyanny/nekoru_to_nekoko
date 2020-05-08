@@ -1,0 +1,10 @@
+name: Hello
+on: gollum
+jobs:
+  my_first_job:
+    name: hello
+    runs-on: ubuntu-latest
+    steps:
+    - name: hi
+      run: |
+        echo hello world
