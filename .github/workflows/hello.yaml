@@ -13,8 +13,8 @@ jobs:
         mkdir -p nekoru_to_nekoko
     - uses: actions/download-artifact@v2
       with:
-      name: my-artifact
-      path: nekoru_to_nekoko
+        name: my-artifact
+        path: nekoru_to_nekoko
     - name: Display structure of downloaded files
       run: ls -R
       working-directory: nekoru_to_nekoko
