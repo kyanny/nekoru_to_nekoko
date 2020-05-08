@@ -8,3 +8,10 @@ jobs:
     - name: hi
       run: |
         echo hello world
+    - name: mkdir
+      run: |
+        mkdir -p nekoru_to_nekoko
+    - name: download
+      run: |
+        curl -O https://www.dan.co.jp/~dankogai/dan-180x240.png
+    
