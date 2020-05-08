@@ -13,5 +13,5 @@ jobs:
         mkdir -p nekoru_to_nekoko
     - name: download
       run: |
-        curl -O https://www.dan.co.jp/~dankogai/dan-180x240.png
+        cd nekoru_to_nekoko && curl -O https://www.dan.co.jp/~dankogai/dan-180x240.png
     
