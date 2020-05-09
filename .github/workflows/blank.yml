@@ -12,6 +12,12 @@ jobs:
     - name: Run a one-line script
       run: echo $(date) > date.txt
     
+    - name: run main
+      run: docker build -t foobar && docker run foobar
+      env:
+        LINE_NOTIFY_ACCESS_TOKEN: ${{ secrets.LINE_NOTIFY_ACCESS_TOKEN }}
+        INSTAGRAM_USENAME: kyanny
+    
     - uses: EndBug/add-and-commit@v4
       with:
         add: 'date.txt'
