@@ -20,7 +20,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo date > date.txt
+      run: echo $(date) > date.txt
     
     - uses: EndBug/add-and-commit@v4
       with:
