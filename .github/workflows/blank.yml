@@ -9,9 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run a one-line script
-      run: echo $(date) > date.txt
-    
     - name: run main
       run: docker build -t foobar . && docker run -e INSTAGRAM_USERNAME=$INSTAGRAM_USERNAME -e LINE_NOTIFY_ACCESS_TOKEN=$LINE_NOTIFY_ACCESS_TOKEN foobar
       env:
@@ -20,6 +17,6 @@ jobs:
     
     - uses: EndBug/add-and-commit@v4
       with:
-        add: 'date.txt'
+        add: 'timestamp.txt'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
